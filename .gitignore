@@ -1,0 +1,24 @@
+# Independently written ignore rules for the restricted portfolio export
+/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.env
+.env.*
+SER_Project/data/
+SER_Project/results/
+/results/
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.csv
+*.pkl
+*.pickle
+*.joblib
+*.npz
+*.zip
+*.bundle
+*.tar.gz

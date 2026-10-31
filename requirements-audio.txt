@@ -1,0 +1,3 @@
+-r requirements-test.txt
+librosa==0.11.0
+soundfile==0.13.1
