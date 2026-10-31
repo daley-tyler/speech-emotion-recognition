@@ -4,7 +4,7 @@ I built this university project to understand machine learning beyond library in
 
 The most useful lesson was about evaluation. My original recording split included the same actors in training and testing. I now separate actors before preprocessing and model selection, and report that harder task prominently. This portfolio pass also fixes numerical errors and adds tests against controlled examples and established implementations.
 
-The project began in [sahamis/Project_CSE432-532](https://github.com/sahamis/Project_CSE432-532). The instructor supplied the brief and starter materials; the algorithm modules and analysis notebooks were added in my fork. I used Codex for the later correctness review, tests, evaluation tools and documentation. [Provenance](docs/PROVENANCE.md) records that division and the remaining publication questions. This is a local candidate awaiting publication approval; no source-code license has been assigned.
+The project began in [sahamis/Project_CSE432-532](https://github.com/sahamis/Project_CSE432-532). The instructor supplied the brief and starter materials; the algorithm modules and analysis notebooks were added in my fork. I used Codex for the later correctness review, tests, evaluation tools and documentation. [Provenance](docs/PROVENANCE.md) records that division and the release scope. This repository is now public; no source-code license has been assigned.
 
 ## What I implemented
 
@@ -51,7 +51,7 @@ python -m pip install -r requirements-verified.txt
 python -m unittest discover -s tests -v
 ```
 
-All **49 tests pass** on macOS with Python 3.12 and in local Linux containers with Python 3.12 and 3.13. Tests use synthetic data and generated WAV fixtures, so they need no RAVDESS download. The proposed Actions workflow runs those lightweight checks; no hosted run has occurred. SciPy 1.17.0 is pinned because the older wheel failed to load on this Mac. The environment snapshot includes the optional figure dependencies.
+All **49 tests pass** on macOS with Python 3.12, in local Linux containers with Python 3.12 and 3.13, and in [GitHub Actions on Ubuntu with Python 3.12 and 3.13](https://github.com/daley-tyler/speech-emotion-recognition/actions/runs/41158639939). Tests use synthetic data and generated WAV fixtures, so they need no RAVDESS download. SciPy 1.17.0 is pinned because the older wheel failed to load on this Mac. The environment snapshot includes the optional figure dependencies.
 
 ## Reproduce the experiments
 
@@ -75,4 +75,4 @@ The command reproduces the fixed-k comparison and nested actor CV. It checks tha
 
 RAVDESS is small, acted and limited to two statements. Unseen-actor evaluation does not establish performance on spontaneous speech, another language or another recording environment. MiniLearn has simple optimizers, one KMeans initialization and threshold-limited trees; its probability scores are not calibrated. Further work should prioritize verified audio regeneration and broader repeated speaker evaluation before more elaborate models.
 
-The candidate excludes historical notebooks, paper PDFs, supplied assignment/setup text, the instructor's downloader, raw audio, feature tables and model artifacts. Original coursework and development history remain preserved separately and linked through [provenance](docs/PROVENANCE.md). The [dataset and reference notes](docs/DATA_AND_REFERENCES.md) credit the original papers and RAVDESS's CC BY-NC-SA 4.0 conditions. Permissions for any inherited materials and applicable course publication rules must be settled before a public release; the current candidate grants no broader reuse rights.
+This public snapshot excludes historical notebooks, paper PDFs, supplied assignment/setup text, the instructor's downloader, raw audio, feature tables and model artifacts. Original coursework and development history remain preserved separately and linked through [provenance](docs/PROVENANCE.md). The [dataset and reference notes](docs/DATA_AND_REFERENCES.md) credit the original papers and RAVDESS's CC BY-NC-SA 4.0 conditions. Publication does not grant broader reuse rights to excluded coursework or third-party materials.
