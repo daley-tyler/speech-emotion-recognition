@@ -22,15 +22,14 @@ class PCA:
 
         covar = np.atleast_2d(np.cov(X_center, rowvar=False))
 
-        #eigenvalues
         eig_val, eig_vec = np.linalg.eigh(covar)
 
-        #Sort but from large to small
+        # eigh returns ascending eigenvalues; select the largest components first.
         idx = np.argsort(eig_val)[::-1]
 
         eig_val = np.maximum(eig_val[idx], 0)
         eig_vec = eig_vec[:,idx]
-        # rows and n_components cols then transposed
+        # Each row is a principal direction in the original feature space.
         self.components_ = eig_vec[:, :self.n_components].T
         self.explained_variance_ = eig_val[:self.n_components]
 

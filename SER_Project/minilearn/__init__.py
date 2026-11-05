@@ -1,6 +1,6 @@
 """Public imports for the NumPy algorithms developed in Tyler Daley's course fork.
 
-Course origins and the later AI-assisted review are documented in docs/PROVENANCE.md.
+Course origins and subsequent changes are documented in docs/PROVENANCE.md.
 This header replaces the instructor-provided package stub text for the local export.
 """
 

@@ -33,15 +33,13 @@ class LinearSVM:
                     row = X_bias[k]
                     t = y_bin[k]
                     marg = t * np.dot(row,wz)
-                    #Regularize
+                    # L2 regularization excludes the intercept.
                     grad = wz.copy()
-                    #but don't touch the bias
                     grad[0] = 0
 
                     if marg <1:
                         grad = grad - self.C_ * t * row
 
-                    #updated weights
                     wz = wz - self.learning_rate * grad
 
             self.w_[i] = wz

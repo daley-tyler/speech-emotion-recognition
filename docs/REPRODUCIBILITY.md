@@ -10,7 +10,7 @@ This is not a complete raw-audio rebuild. The original local data directory has 
 
 ## Cache experiments
 
-The exact input is `week5_audio.csv`, with 2,452 rows and SHA-256 `f8c2d3540992acac27e2d62a2d38a6049b9575ef547847bad4966a7f51c398fd`. This table is kept outside the candidate because it contains dataset-derived feature vectors. The benchmark selects its 1,440 speech rows, validates filename/actor/emotion consistency and uses only the fixed 724 acoustic columns. It rejects additional model-input columns, duplicate recordings, missing metadata and nonfinite features.
+The exact input is `week5_audio.csv`, with 2,452 rows and SHA-256 `f8c2d3540992acac27e2d62a2d38a6049b9575ef547847bad4966a7f51c398fd`. This table is kept outside the repository because it contains dataset-derived feature vectors. The benchmark selects its 1,440 speech rows, validates filename/actor/emotion consistency and uses only the fixed 724 acoustic columns. It rejects additional model-input columns, duplicate recordings, missing metadata and nonfinite features.
 
 From the repository root after installing `requirements-verified.txt`:
 
@@ -74,6 +74,6 @@ Freshly generated features may differ from the earlier cache because its full ex
 
 ## Validation scope
 
-The proposed workflow runs dependency checks and all synthetic tests on Ubuntu with Python 3.12 and 3.13. Its commands were exercised in local Linux arm64 containers and on macOS with Python 3.12. A hosted GitHub Actions run and Linux x86-64 execution remain unverified. The workflow does not fetch the dataset or use saved notebook outputs.
+The workflow runs dependency checks and all synthetic tests on Ubuntu with Python 3.12 and 3.13. [Both hosted jobs passed all 49 tests](https://github.com/daley-tyler/speech-emotion-recognition/actions/runs/41160155316), without failures or skips. The commands also passed in local Linux arm64 containers and on macOS with Python 3.12. The workflow does not fetch the dataset or use saved notebook outputs.
 
-Tests cover all six classifiers on controlled examples, selected scikit-learn references, numerical boundaries, neural-network gradients, input and metric validation, synthetic audio, grouped fold coverage and separation, and training-only preprocessing/model selection. They support the tested behaviors rather than equivalence to every reference optimizer or production readiness. The original exploratory notebooks require additional dependencies and remain outside the clean candidate.
+Tests cover all six classifiers on controlled examples, selected scikit-learn references, numerical boundaries, neural-network gradients, input and metric validation, synthetic audio, grouped fold coverage and separation, and training-only preprocessing/model selection. They support the tested behaviors rather than equivalence to every reference optimizer or production readiness. The original exploratory notebooks require additional dependencies and remain outside this release.
