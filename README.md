@@ -1,10 +1,10 @@
 # Speech Emotion Recognition with MiniLearn
 
-I built this university project to understand machine learning beyond library interfaces. MiniLearn implements classifiers, preprocessing, metrics, PCA and clustering in NumPy, with notebooks exploring speech emotion recognition on RAVDESS. The labels describe acted vocal expressions, not someone's actual emotional state.
+I built MiniLearn to understand how machine learning algorithms work. It implements classifiers, preprocessing, metrics, PCA and clustering in NumPy. I used KNN to classify acted vocal expressions from RAVDESS using features such as MFCCs, chroma and Mel spectra.
 
-The most useful lesson was about evaluation. My original recording split included the same actors in training and testing. I now separate actors before preprocessing and model selection, and report that harder task prominently. This portfolio pass also fixes numerical errors and adds tests against controlled examples and established implementations.
+My original recording split included the same actors in training and testing. When I held out entire actors with the same KNN settings and class counts, accuracy dropped from 49.67% to 33.33%. The evaluation below explains how I set up that comparison and tuned the model without using the held-out speakers.
 
-The project began in [sahamis/Project_CSE432-532](https://github.com/sahamis/Project_CSE432-532). The instructor supplied the brief and starter materials; the algorithm modules and analysis notebooks were added in my fork. [Provenance](docs/PROVENANCE.md) records that division, subsequent changes and the release scope. This repository is now public; no source-code license has been assigned.
+The project began in [sahamis/Project_CSE432-532](https://github.com/sahamis/Project_CSE432-532). The instructor supplied the brief and starter materials; the algorithm modules and analysis notebooks were added in my fork. [Provenance](docs/PROVENANCE.md) records that division, subsequent changes and the release scope. No source-code license has been assigned.
 
 ## What I implemented
 
