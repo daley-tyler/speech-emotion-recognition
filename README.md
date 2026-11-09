@@ -1,6 +1,6 @@
 # Speech Emotion Recognition with MiniLearn
 
-I built MiniLearn to understand how machine learning algorithms work under the hood. It implements classifiers, preprocessing, metrics, PCA and clustering in NumPy. I used KNN to classify acted vocal expressions from RAVDESS using features such as MFCCs, chroma and Mel spectra.
+I built MiniLearn to understand how machine learning algorithms work. It implements classifiers, preprocessing, metrics, PCA and clustering in NumPy. I used KNN to classify acted vocal expressions from RAVDESS using features such as MFCCs, chroma and Mel spectra.
 
 My original recording split included the same actors in training and testing. When I held out entire actors with the same KNN settings and class counts, accuracy dropped from 49.67% to 33.33%. The evaluation below explains how I set up that comparison and tuned the model without using the held-out speakers.
 
